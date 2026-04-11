@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --red-light: #ff6b6b;
+  --red-mid: #e63946;
+  --red-deep: #c1121f;
+  --red-darker: #9b0a18;
+  --cream: #fff8f8;
+  --card-shadow: 0 8px 40px rgba(193, 18, 31, 0.08);
+  --card-shadow-hover: 0 20px 60px rgba(193, 18, 31, 0.16);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  background: linear-gradient(135deg, #fef2f2 0%, #fff5f5 40%, #fdf0f0 100%);
+  min-height: 100vh;
+  color: #1a1a1a;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fef2f2;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--red-mid);
+  border-radius: 99px;
+}
+
+/* Custom utilities */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* Splash Hover Animation for Images */
+.splash-hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-25deg);
+  z-index: 10;
+  transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+  pointer-events: none;
+}
+.splash-hover:hover::before {
+  left: 200%;
+}
