@@ -7,17 +7,17 @@ const TermiteServices = () => {
     {
       title: "Pre Construction Treatment",
       description: "Soil treatment before construction to create an anti-termite barrier, protecting your building from the foundation up.",
-      image: "/termite-pre.png"
+      image: "/images/pre.png"
     },
     {
       title: "Post Construction Treatment",
       description: "Drilling and injection treatment for existing buildings to eliminate active termite colonies and prevent future infestations.",
-      image: "/termite-post.png"
+      image: "/images/post.png"
     },
     {
       title: "Anti-Termite Piping System",
       description: "Advanced reticulation piping system installed within the building for periodic re-treatment without drilling.",
-      image: "/images/hero-bg.png"
+      image: "/images/piping.png"
     }
   ];
 
