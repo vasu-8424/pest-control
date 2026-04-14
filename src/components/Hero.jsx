@@ -52,7 +52,7 @@ const Hero = () => {
             className="inline-flex items-center gap-2 bg-red-600/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 shadow-[0_0_15px_rgba(220,38,38,0.5)] border border-red-500"
           >
             <ShieldCheck size={18} />
-            <span>PEST CONTROL IN NELLORE</span>
+            <span>PEST CONTROL NELLORE</span>
           </motion.div>
 
           <motion.h1 
