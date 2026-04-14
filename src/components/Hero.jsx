@@ -111,8 +111,8 @@ const Hero = () => {
             <p className="text-red-200 font-medium">Support</p>
           </div>
           <div>
-            <h3 className="text-4xl font-black text-white mb-1 drop-shadow-lg">10k+</h3>
-            <p className="text-red-200 font-medium">Happy Clients</p>
+            <h3 className="text-4xl font-black text-white mb-1 drop-shadow-lg">3000+</h3>
+            <p className="text-red-200 font-medium">Happy Customers</p>
           </div>
         </motion.div>
       </div>

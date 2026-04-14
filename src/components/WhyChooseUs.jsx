@@ -1,5 +1,5 @@
 import React from 'react';
-import { Leaf, Award } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const WhyChooseUs = () => {
@@ -28,33 +28,27 @@ const WhyChooseUs = () => {
               Simhapuri Pest Control provides professional pest management services for homes, offices, and commercial spaces. Our experienced technicians use advanced pest control techniques and eco-friendly treatments to eliminate termites, cockroaches, rats, mosquitoes, and other harmful pests. We focus on safe, reliable, and long-lasting solutions to keep your property clean, healthy, and pest-free.
             </p>
             
-            {/* 2 Column Badges */}
-            <div className="grid md:grid-cols-2 gap-8 mb-4 border-t border-gray-100 pt-10">
-              {/* Badge 1 */}
-              <div className="flex items-start gap-4">
-                <div className="bg-red-100 p-4 rounded-full flex-shrink-0">
-                  <Leaf size={24} className="text-red-600" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-900 mb-2 text-lg leading-tight">Safe & Eco-Friendly<br/>Treatments</h4>
-                  <p className="text-gray-500 text-sm leading-relaxed">
-                    We use eco-friendly, government-approved treatments that are safe for children, pets, and the environment.
+            {/* Features Array */}
+            <div className="grid md:grid-cols-2 gap-6 mb-4 border-t border-gray-100 pt-10">
+              {[
+                "Residential & Commercial Pest Control Services",
+                "Affordable & Transparent Pricing",
+                "Service Warranty for Assured Results",
+                "Professional & Certified Technicians",
+                "Service Coverage Across Andhra Pradesh",
+                "Annual Maintenance Contracts (AMC)",
+                "Free Inspection & Customized Treatment Plans",
+                "ISO 9001:2015 Certified Company"
+              ].map((point, index) => (
+                <div key={index} className="flex items-center gap-4">
+                  <div className="bg-red-100 p-3 rounded-full flex-shrink-0">
+                    <CheckCircle size={20} className="text-red-600" />
+                  </div>
+                  <p className="font-bold text-gray-900 leading-tight">
+                    {point}
                   </p>
                 </div>
-              </div>
-              
-              {/* Badge 2 */}
-              <div className="flex items-start gap-4">
-                <div className="bg-red-100 p-4 rounded-full flex-shrink-0">
-                  <Award size={24} className="text-red-600" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-900 mb-2 text-lg leading-tight">Certified & Experienced<br/>Technicians</h4>
-                  <p className="text-gray-500 text-sm leading-relaxed">
-                    Our skilled technicians use advanced tools and proven methods to deliver fast, effective pest control solutions.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
             
             <div className="mt-8">

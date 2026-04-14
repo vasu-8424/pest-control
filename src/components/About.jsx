@@ -12,18 +12,18 @@ const About = () => {
             <div className="bg-red-50 rounded-2xl p-4 absolute -top-8 -left-8 w-64 h-64 -z-10 hidden md:block"></div>
             <div className="relative splash-hover rounded-xl shadow-2xl overflow-hidden group w-full h-[500px]">
               <img 
-                src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800" 
+                src="/about-main.png" 
                 alt="Pest Control Equipment" 
                 className="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-105"
               />
             </div>
             {/* Badge overlay */}
-            <div className="absolute -bottom-6 -right-6 bg-red-600 text-white p-6 rounded-xl shadow-xl flex items-center gap-4 w-64">
-              <Award size={48} />
-              <div>
-                <p className="font-bold text-xl">ISO 9001:2015</p>
-                <p className="text-sm text-red-100">Certified Company</p>
-              </div>
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 md:w-40 md:h-40 z-20 hover:scale-105 transition-transform duration-500 bg-white rounded-full p-2 shadow-2xl overflow-hidden flex items-center justify-center">
+              <img 
+                src="/iso-badge.jpg" 
+                alt="ISO 9001:2015 Certified Company" 
+                className="w-[90%] h-[90%] object-contain"
+              />
             </div>
           </div>
 
@@ -35,44 +35,28 @@ const About = () => {
             </h2>
             
             <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-              Founded in 2013, <strong className="text-gray-900">Simhapuri Pest Control</strong> has grown to become the most reliable and effective pest management service provider in Andhra Pradesh. We specialize in eliminating pests from residential, commercial, and industrial properties using scientifically proven methods.
+              Simhapuri Pest Control was founded by an experienced pest control professional with hands-on expertise since 2013, with a clear vision—to deliver safe, effective, and long-lasting pest control solutions with complete customer satisfaction.
             </p>
             
-            <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-              Our team consists of highly experienced technicians who utilize government-approved, eco-friendly chemicals to ensure maximum effectiveness with zero harm to your family, pets, and the environment.
+            <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+              Based in Nellore, we proudly serve the entire Nellore district and extend our services across Andhra Pradesh. With a strong commitment to quality and reliability, we use advanced pest control methods, modern equipment, and government-approved chemicals to ensure the highest safety standards for your home and business.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-6 bg-gray-50 p-6 rounded-xl border border-gray-100">
-              <div className="flex items-start gap-4">
-                <div className="bg-red-100 p-2 rounded-full text-red-600 shrink-0">
-                  <ShieldAlert size={20} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-900 mb-1">Total Safety</h4>
-                  <p className="text-sm text-gray-600">Odorless and human-safe treatment protocols.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="bg-red-100 p-2 rounded-full text-red-600 shrink-0">
-                  <CheckCircle size={20} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-900 mb-1">Reliability</h4>
-                  <p className="text-sm text-gray-600">On-time service with guaranteed results.</p>
-                </div>
-              </div>
+            <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+              As an ISO-certified company, we follow strict quality protocols and employ fully trained and certified technicians who are dedicated to delivering the best results in the market.
+            </p>
 
-              <div className="flex items-start gap-4 sm:col-span-2">
-                <div className="bg-red-100 p-2 rounded-full text-red-600 shrink-0">
-                  <Award size={20} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-900 mb-1">Long-term Protection</h4>
-                  <p className="text-sm text-gray-600">Addressing the root cause to prevent recurring infestations.</p>
-                </div>
-              </div>
-            </div>
+            <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+              Our services are designed not just to eliminate pests but to provide long-term protection, backed by trusted warranties for your peace of mind.
+            </p>
+
+            <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+              Whether it’s residential or commercial pest control, Simhapuri Pest Control is your trusted partner for a pest-free environment.
+            </p>
+
+            <p className="text-gray-600 text-lg mb-8 leading-relaxed font-semibold">
+              We also provide Annual Maintenance Contracts (AMC) for continuous protection and prevention.
+            </p>
 
           </div>
         </div>

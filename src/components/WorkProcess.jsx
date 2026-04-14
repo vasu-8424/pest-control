@@ -105,7 +105,7 @@ const WorkProcess = () => {
                 >
                   
                   {/* Content Card */}
-                  <div className={`w-full lg:w-[45%] flex ${isEven ? 'lg:justify-end' : 'lg:justify-start'}`}>
+                  <div className={`w-full lg:w-[45%] flex pl-20 lg:pl-0 ${isEven ? 'lg:justify-end' : 'lg:justify-start'}`}>
                     <div className="w-full bg-white/70 backdrop-blur-xl border border-white/80 shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-3xl p-8 flex flex-col transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(220,38,38,0.12)] hover:bg-white/90 group text-left relative overflow-hidden">
                       {/* Interactive Hover Glow */}
                       <div className="absolute top-0 left-0 w-1 h-full bg-red-600 transform -translate-x-full transition-transform duration-300 group-hover:translate-x-0"></div>

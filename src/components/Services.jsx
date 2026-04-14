@@ -66,7 +66,7 @@ const Services = () => {
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h4 className="text-red-400 font-bold uppercase tracking-wider mb-2">Our Services</h4>
           <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 drop-shadow-md">
-            Premium Pest Management
+            Professional Pest Management
           </h2>
           <p className="text-gray-300 text-lg font-light">
             We offer specialized, government-approved treatments designed to tackle every kind of pest problem at its root, delivered with unmatched precision.
@@ -77,6 +77,7 @@ const Services = () => {
             {servicesData.map((service, index) => (
               <motion.div 
                 key={index} 
+                id={service.title === 'Termite Control' ? 'termite-control' : undefined}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
