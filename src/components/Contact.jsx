@@ -5,32 +5,31 @@ const Contact = () => {
   const [result, setResult] = useState("");
   const [status, setStatus] = useState("idle"); // idle, loading, success, error
 
-  const onSubmit = async (event) => {
+  const onSubmit = (event) => {
     event.preventDefault();
-    setStatus("loading");
-    setResult("Sending....");
     
     const formData = new FormData(event.target);
+    const name = formData.get("name");
+    const phone = formData.get("phone");
+    const service = formData.get("service");
+    const message = formData.get("message");
 
-    // Using Web3Forms - You'll need an access key from https://web3forms.com/
-    formData.append("access_key", "f168e84c-0b7a-428b-95e6-e4fc5da46742");
+    // Format the message for WhatsApp
+    const text = `*New Service Request*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Service:* ${service}\n*Message:* ${message}`;
+    const encodedText = encodeURIComponent(text);
+    
+    // Target WhatsApp Number
+    const whatsappNumber = "918885914421";
+    
+    // Create WhatsApp API URL
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+    
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, "_blank");
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    });
-
-    const data = await response.json();
-
-    if (data.success) {
-      setStatus("success");
-      setResult("Form Submitted Successfully!");
-      event.target.reset();
-    } else {
-      console.log("Error", data);
-      setStatus("error");
-      setResult(data.message);
-    }
+    setStatus("success");
+    setResult("Request Sent!");
+    event.target.reset();
   };
 
   return (
